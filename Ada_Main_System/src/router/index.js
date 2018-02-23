@@ -10,14 +10,9 @@ import Dashboard from '@/views/Dashboard'
 import Colors from '@/views/theme/Colors'
 import Typography from '@/views/theme/Typography'
 
-import Charts from '@/views/Charts'
-import Widgets from '@/views/Widgets'
-
-// Views - Components
+// Views - Base
 import Cards from '@/views/base/Cards'
-import Forms from '@/views/base/Forms'
 import Switches from '@/views/base/Switches'
-import Tables from '@/views/base/Tables'
 import Breadcrumbs from '@/views/base/Breadcrumbs'
 import Carousels from '@/views/base/Carousels'
 import Collapses from '@/views/base/Collapses'
@@ -36,6 +31,18 @@ import ButtonGroups from '@/views/buttons/ButtonGroups'
 import Dropdowns from '@/views/buttons/Dropdowns'
 import SocialButtons from '@/views/buttons/SocialButtons'
 
+import Charts from '@/views/Charts'
+
+// Views - Editors
+import TextEditors from '@/views/editors/TextEditors'
+import CodeEditors from '@/views/editors/CodeEditors'
+
+// Views - Forms
+import BasicForms from '@/views/forms/BasicForms'
+import AdvancedForms from '@/views/forms/AdvancedForms'
+
+import GoogleMaps from '@/views/GoogleMaps'
+
 // Views - Icons
 import Flags from '@/views/icons/Flags'
 import FontAwesome from '@/views/icons/FontAwesome'
@@ -45,12 +52,24 @@ import SimpleLineIcons from '@/views/icons/SimpleLineIcons'
 import Alerts from '@/views/notifications/Alerts'
 import Badges from '@/views/notifications/Badges'
 import Modals from '@/views/notifications/Modals'
+import Toastr from '@/views/notifications/Toastr'
+
+import Tables from '@/views/tables/Tables'
+
+import Widgets from '@/views/Widgets'
 
 // Views - Pages
 import Page404 from '@/views/pages/Page404'
 import Page500 from '@/views/pages/Page500'
 import Login from '@/views/pages/Login'
 import Register from '@/views/pages/Register'
+
+// Views - UI Kits
+import Invoice from '@/views/ui-kits/Invoicing/Invoice'
+
+import Compose from '@/views/ui-kits/Email/Compose'
+import Inbox from '@/views/ui-kits/Email/Inbox'
+import Message from '@/views/ui-kits/Email/Message'
 
 Vue.use(Router)
 
@@ -91,16 +110,6 @@ export default new Router({
           ]
         },
         {
-          path: 'charts',
-          name: 'Charts',
-          component: Charts
-        },
-        {
-          path: 'widgets',
-          name: 'Widgets',
-          component: Widgets
-        },
-        {
           path: 'base',
           redirect: '/base/cards',
           name: 'Base',
@@ -109,29 +118,14 @@ export default new Router({
           },
           children: [
             {
-              path: 'cards',
-              name: 'Cards',
-              component: Cards
-            },
-            {
-              path: 'forms',
-              name: 'Forms',
-              component: Forms
-            },
-            {
-              path: 'switches',
-              name: 'Switches',
-              component: Switches
-            },
-            {
-              path: 'tables',
-              name: 'Tables',
-              component: Tables
-            },
-            {
               path: 'breadcrumbs',
               name: 'Breadcrumbs',
               component: Breadcrumbs
+            },
+            {
+              path: 'cards',
+              name: 'Cards',
+              component: Cards
             },
             {
               path: 'carousels',
@@ -178,6 +172,12 @@ export default new Router({
               name: 'Progress Bars',
               component: ProgressBars
             },
+
+            {
+              path: 'switches',
+              name: 'Switches',
+              component: Switches
+            },
             {
               path: 'tooltips',
               name: 'Tooltips',
@@ -214,6 +214,56 @@ export default new Router({
               component: SocialButtons
             }
           ]
+        },
+        {
+          path: 'charts',
+          name: 'Charts',
+          component: Charts
+        },
+        {
+          path: 'editors',
+          redirect: '/editors/text-editors',
+          name: 'Editors',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'text-editors',
+              name: 'Text Editors',
+              component: TextEditors
+            },
+            {
+              path: 'code-editors',
+              name: 'Code Editors',
+              component: CodeEditors
+            }
+          ]
+        },
+        {
+          path: 'forms',
+          redirect: '/forms/basic-forms',
+          name: 'Forms',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'basic-forms',
+              name: 'Basic Forms',
+              component: BasicForms
+            },
+            {
+              path: 'advanced-forms',
+              name: 'Advanced Forms',
+              component: AdvancedForms
+            }
+          ]
+        },
+        {
+          path: 'google-maps',
+          name: 'Google Maps',
+          component: GoogleMaps
         },
         {
           path: 'icons',
@@ -262,6 +312,70 @@ export default new Router({
               path: 'modals',
               name: 'Modals',
               component: Modals
+            },
+            {
+              path: 'toastr',
+              name: 'Toastr',
+              component: Toastr
+            }
+          ]
+        },
+        {
+          path: 'tables',
+          name: 'Tables',
+          component: Tables
+        },
+        {
+          path: 'widgets',
+          name: 'Widgets',
+          component: Widgets
+        },
+        {
+          path: 'ui-kits',
+          name: 'UI Kits',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'invoicing',
+              redirect: '/ui-kits/invoicing/invoice',
+              name: 'Invoicing',
+              component: {
+                render (c) { return c('router-view') }
+              },
+              children: [
+                {
+                  path: 'invoice',
+                  name: 'Invoice',
+                  component: Invoice
+                }
+              ]
+            },
+            {
+              path: 'email',
+              redirect: '/ui-kits/email/inbox',
+              name: 'Email',
+              component: {
+                render (c) { return c('router-view') }
+              },
+              children: [
+                {
+                  path: 'compose',
+                  name: 'Compose',
+                  component: Compose
+                },
+                {
+                  path: 'inbox',
+                  name: 'Inbox',
+                  component: Inbox
+                },
+                {
+                  path: 'message',
+                  name: 'Message',
+                  component: Message
+                }
+              ]
             }
           ]
         }

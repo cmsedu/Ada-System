@@ -1,6 +1,6 @@
 <template>
   <footer class="app-footer">
-    <span><a href="http://apaxenglish.com">Ada System</a> &copy; 2018 Apax English.</span>
+    <span><a href="http://apaxenglish.com/">Apax English</a> &copy; 2018.</span>
     <span class="ml-auto">Powered by <a href="https://vuejs.org">VueJS</a></span>
   </footer>
 </template>

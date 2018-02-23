@@ -1,6 +1,7 @@
 /*!
- * Ada System - Web application platform
- * @version v1.0.0
+ * Ada -ERP System of Apax English - Bootstrap 4 Admin Template
+ * @version v1.0.0.1
+ * @link http://apaxenglish.com/
  * Copyright (c) 2018 Apax English
  * @license MIT
  */
@@ -16,6 +17,9 @@
 
 // Import core styles
 @import "core/core";
+
+// Import UI Kits
+@import "uikits/uikits";
 
 // Custom styles
 @import "custom";

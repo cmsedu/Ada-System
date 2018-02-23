@@ -31,10 +31,7 @@ module.exports = {
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,
-        acceptSslCerts: true,
-        chromeOptions : {
-          args : ["start-maximized", "--incognito"]
-        }
+        acceptSslCerts: true
       }
     },
 

@@ -63,11 +63,6 @@ export default {
           icon: 'icon-puzzle'
         },
         {
-          name: 'Forms',
-          url: '/base/forms',
-          icon: 'icon-puzzle'
-        },
-        {
           name: 'Jumbotrons',
           url: '/base/jumbotrons',
           icon: 'icon-puzzle'
@@ -100,11 +95,6 @@ export default {
         {
           name: 'Switches',
           url: '/base/switches',
-          icon: 'icon-puzzle'
-        },
-        {
-          name: 'Tables',
-          url: '/base/tables',
           icon: 'icon-puzzle'
         },
         {
@@ -142,6 +132,54 @@ export default {
       ]
     },
     {
+      name: 'Charts',
+      url: '/charts',
+      icon: 'icon-pie-chart'
+    },
+    {
+      name: 'Editors',
+      url: '/editors',
+      icon: 'fa fa-code',
+      children: [
+        {
+          name: 'Text Editors',
+          url: '/editors/text-editors',
+          icon: 'icon-note'
+        },
+        {
+          name: 'Code Editors',
+          url: '/editors/code-editors',
+          icon: 'fa fa-code'
+        }
+      ]
+    },
+    {
+      name: 'Forms',
+      url: '/forms',
+      icon: 'icon-note',
+      children: [
+        {
+          name: 'Basic Forms',
+          url: '/forms/basic-forms',
+          icon: 'icon-note'
+        },
+        {
+          name: 'Advanced Forms',
+          url: '/forms/advanced-forms',
+          icon: 'icon-note'
+        }
+      ]
+    },
+    {
+      name: 'Google Maps',
+      url: '/google-maps',
+      icon: 'icon-map',
+      badge: {
+        variant: 'info',
+        text: 'NEW'
+      }
+    },
+    {
       name: 'Icons',
       url: '/icons',
       icon: 'icon-star',
@@ -172,11 +210,6 @@ export default {
       ]
     },
     {
-      name: 'Charts',
-      url: '/charts',
-      icon: 'icon-pie-chart'
-    },
-    {
       name: 'Notifications',
       url: '/notifications',
       icon: 'icon-bell',
@@ -195,15 +228,25 @@ export default {
           name: 'Modals',
           url: '/notifications/modals',
           icon: 'icon-bell'
+        },
+        {
+          name: 'Toastr',
+          url: '/notifications/toastr',
+          icon: 'icon-bell'
         }
       ]
+    },
+    {
+      name: 'Tables',
+      url: '/tables',
+      icon: 'icon-list'
     },
     {
       name: 'Widgets',
       url: '/widgets',
       icon: 'icon-calculator',
       badge: {
-        variant: 'primary',
+        variant: 'danger',
         text: 'NEW'
       }
     },
@@ -212,7 +255,12 @@ export default {
     },
     {
       title: true,
-      name: 'Extras'
+      name: 'Extras',
+      wrapper: {
+        element: 'span',
+        attributes: {}
+      },
+      class: ''
     },
     {
       name: 'Pages',
@@ -242,17 +290,76 @@ export default {
       ]
     },
     {
-      name: 'Download Ada System',
-      url: 'https://gitlab.com/ApaxEnglish/Ada-System',
-      icon: 'icon-cloud-download',
-      class: 'mt-auto',
-      variant: 'success'
+      name: 'UI Kits',
+      url: '/ui-kits',
+      icon: 'icon-layers',
+      children: [
+        {
+          name: 'Invoicing',
+          url: '/ui-kits/invoicing',
+          icon: 'icon-speech',
+          children: [
+            {
+              name: 'Invoice',
+              url: '/ui-kits/invoicing/invoice',
+              icon: 'icon-speech'
+            }
+          ]
+        },
+        {
+          name: 'Email',
+          url: '/ui-kits/email',
+          icon: 'icon-speech',
+          children: [
+            {
+              name: 'Inbox',
+              url: '/ui-kits/email/inbox',
+              icon: 'icon-speech'
+            },
+            {
+              name: 'Message',
+              url: '/ui-kits/email/message',
+              icon: 'icon-speech'
+            },
+            {
+              name: 'Compose',
+              url: '/ui-kits/email/compose',
+              icon: 'icon-speech'
+            }
+          ]
+        }
+      ]
     },
     {
-      name: 'Dev Ada System',
-      url: 'http://apaxenglish.com',
-      icon: 'icon-layers',
-      variant: 'danger'
+      divider: true,
+      class: 'm-2'
+    },
+    {
+      title: true,
+      name: 'Labels'
+    },
+    {
+      name: 'Label danger',
+      icon: 'fa fa-circle text-danger',
+      class: '',
+      label: {
+        variant: 'danger',
+        class: ''
+      }
+    },
+    {
+      name: 'Label info',
+      icon: 'fa fa-circle text-info',
+      label: {
+        variant: 'info'
+      }
+    },
+    {
+      name: 'Label warning',
+      icon: 'fa fa-circle text-warning',
+      label: {
+        variant: 'warning'
+      }
     }
   ]
 }

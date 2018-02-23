@@ -31,7 +31,7 @@
         <Callout variant="danger" class="m-0 py-3">
           <div>New UI Project - <strong>deadline</strong></div>
           <small class="text-muted mr-3"><i class="icon-calendar"></i>&nbsp; 10 - 11pm</small>
-          <small class="text-muted"><i class="icon-home"></i>&nbsp; Apax English HQ </small>
+          <small class="text-muted"><i class="icon-home"></i>&nbsp; creativeLabs HQ </small>
           <div class="avatars-stack mt-2">
             <div class="avatar avatar-xs">
               <img src="static/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
@@ -60,7 +60,7 @@
         <Callout variant="primary" class="m-0 py-3">
           <div><strong>Team meeting</strong></div>
           <small class="text-muted mr-3"><i class="icon-calendar"></i>&nbsp; 4 - 6pm</small>
-          <small class="text-muted"><i class="icon-home"></i>&nbsp; Apax English HQ </small>
+          <small class="text-muted"><i class="icon-home"></i>&nbsp; creativeLabs HQ </small>
           <div class="avatars-stack mt-2">
             <div class="avatar avatar-xs">
               <img src="static/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">

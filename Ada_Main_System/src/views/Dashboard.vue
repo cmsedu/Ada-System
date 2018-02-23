@@ -78,7 +78,7 @@
     <b-card>
       <b-row>
         <b-col sm="5">
-          <h4 id="traffic" class="card-title mb-0">Traffic</h4>
+          <h4 class="card-title mb-0">Traffic</h4>
           <div class="small text-muted">November 2017</div>
         </b-col>
         <b-col sm="7" class="d-none d-md-block">
@@ -512,7 +512,6 @@
               </div>
             </div>
             <i slot="country" class="h4 mb-0" :class="flag(item.value.flag)" slot-scope="item" :title="item.value.flag" :id="item.value.flag"></i>
-            <i class="flag-icon flag-icon-pw h1" title="pw" id="pw"></i>
             <div slot="usage" slot-scope="item">
               <div class="clearfix">
                 <div class="float-left">
